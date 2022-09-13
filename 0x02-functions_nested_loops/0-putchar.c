@@ -1,11 +1,11 @@
-#include "main.h"
+#include "_putchar.h"
 /**
  *  * main - prints the string from a character array.
  *   * Return: 0 on success.
  *    */
 int main(void)
 {
-		char c[] = "main";
+		char c[] = "_putchar";
 			int i;
 
 				for (i = 0; i < 9; i++)
