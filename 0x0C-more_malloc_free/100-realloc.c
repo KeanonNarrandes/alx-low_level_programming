@@ -12,34 +12,34 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 
-/* allocating new dynamic memory without initialization */
-	if (new_size > old_size)
-	{
-			free(ptr);
-				ptr = (int *) malloc(new_size);
-		if (ptr == NULL)
-		return (NULL);
-		else
-		return (ptr);
-		}
-/*the call is equivalent to malloc(new_size)*/
-	if (ptr == NULL)
-	{
-			return (ptr = (int *) malloc(new_size));
-	
-				if  (ptr == NULL)
-					return (NULL);
-		}
-/* returns a Void Pointer */
+	/* allocating new dynamic memory without initialization */
+		if (new_size > old_size)
+				{
+							free(ptr);
+										ptr = (int *) malloc(new_size);
+											if (ptr == NULL)
+													return (NULL);
+												else
+														return (ptr);
+													}
+		/*the call is equivalent to malloc(new_size)*/
+			if (ptr == NULL)
+					{
+								return (ptr = (int *) malloc(new_size));
 
-	if (new_size == old_size)
-	return (ptr);
-/* freeing Ptr */
-	if (new_size == 0 && ptr)
-	{
-			free(ptr);
-				return (NULL);
-		}
+											if  (ptr == NULL)
+																return (NULL);
+												}
+			/* returns a Void Pointer */
 
-	return (ptr);
-}}
+				if (new_size == old_size)
+						return (ptr);
+				/* freeing Ptr */
+					if (new_size == 0 && ptr)
+							{
+										free(ptr);
+													return (NULL);
+														}
+
+						return (ptr);
+}
